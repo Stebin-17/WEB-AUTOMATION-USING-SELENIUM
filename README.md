@@ -50,6 +50,7 @@ Here's an explanation of each part of the script:
 - Navigate to the web page: The script navigates to the specified web page and maximizes the browser window.
 
 - Iterate through the email addresses: The script loops through each email address in the emails list and performs the following actions:
+
       a. Enter the email address in the email input field.
       b. Click the checkbox on the form.
       c. Click the submit button on the form.
