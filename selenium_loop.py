@@ -36,19 +36,19 @@ options.add_argument("--disable-popup-blocking")
 browser = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
 # Navigate to the page
-browser.get("https://thejurni.io/daily/rnb10001201024")
+browser.get("web-address")
 browser.maximize_window()
 
 for email in emails:
     try:
         # Find the email input field and enter email
-        email_input = WebDriverWait(browser, 20).until(EC.presence_of_element_located((By.ID,'pl')))
+        email_input = WebDriverWait(browser, 20).until(EC.presence_of_element_located((By.ID,'ID')))
         email_input.clear()  # Clear any existing text in the email input field
         email_input.send_keys(email)
         print(f"Email '{email}' added successfully")
 
         # Find the checkbox and click on it
-        checkbox = WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.ID, 'newnewsletter')))
+        checkbox = WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.ID, 'ID')))
         browser.execute_script("arguments[0].click();", checkbox)
 
         print("Checkbox was clicked")
